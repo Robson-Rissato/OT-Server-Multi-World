@@ -1,5 +1,6 @@
 function onUpdateDatabase()
 	logger.info("Updating database to version 58 (multiworld system)")
+	db.query("ALTER TABLE `players` ADD `weapon_proficiencies` mediumblob DEFAULT NULL;")
 
 	db.query("SET FOREIGN_KEY_CHECKS=0;")
 
